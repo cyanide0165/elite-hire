@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
     "build": "next build",
-    "postbuild": "prisma migrate deploy",
+    "postbuild": "prisma db push",
     "start": "next start",
     "lint": "eslint"
   },
