@@ -53,7 +53,7 @@ export default function ActivityTimeline() {
                 <button className="text-sm text-primary hover:text-primary/80 transition-colors">View All</button>
             </div>
 
-            <div className="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+            <div className="space-y-6 relative">
                 <div className="relative pl-6 border-l border-border/40 space-y-8 ml-2">
                     {ACTIVITIES.map((activity, index) => (
                         <div key={activity.id} className="relative group">
