@@ -103,12 +103,7 @@ npx prisma migrate deploy
 
 Need help? Visit: https://docs.railway.app/deploy/deployments
 
-
 **How to Seed Database (Job Roles Not Showing):**
-1. Go to Railway Dashboard -> Deployments.
-2. Click the latest ACTIVE deployment.
-3. Click 'Shell' (or 'Console' / 'Terminal').
-4. Run this command:
-   `ash
-   npm run db:seed
-   ``n5. Restart your app or just refresh the page.
+- **Good News**: I have automated this!
+- The app will now automatically check and seed the database every time it restarts.
+- If you don't see job roles, just wait 1 minute after deployment and refresh the page.
