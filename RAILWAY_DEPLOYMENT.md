@@ -83,10 +83,15 @@ npx prisma migrate deploy
 - Verify DATABASE_URL and other env vars are set
 - Check disk space and memory allocation
 
-**Database connection error:**
-- Ensure PostgreSQL is running (check Railway Plugins)
-- Verify DATABASE_URL format is correct
-- Run migrations if first deploy
+**Database connection error (Postgres.railway.internal):**
+- **Symptom**: `PrismaClientInitializationError: Can't reach database server at 'Postgres.railway.internal:5432'`
+- **Cause**: The application is trying to reach a service named "Postgres" but it either doesn't exist, is named differently, or the `DATABASE_URL` is hardcoded/incorrect.
+- **Fix**:
+  1. Go to Railway Dashboard.
+  2. Check your Database Service name. Is it `Postgres`? Or `postgresql`? Or something else?
+  3. Go to your App Service -> Variables.
+  4. Ensure `DATABASE_URL` uses the correct service reference variable, e.g., `${{ Postgres.DATABASE_URL }}` or `${{ postgresql.DATABASE_URL }}`.
+  5. Redeploy if you change variables.
 
 ---
 
