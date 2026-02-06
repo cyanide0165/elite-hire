@@ -33,7 +33,7 @@
         "./src/modules/*"
       ],
       "@/components/*": [
-        "./src/fronthand/components/*"
+        "./src/components/*"
       ]
     }
   },
