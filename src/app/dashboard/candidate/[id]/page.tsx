@@ -1,7 +1,7 @@
 import prisma from "@/backhand/lib/db";
 import { ArrowLeft, FileText } from "lucide-react";
 import Link from "next/link";
-import ResumeViewer from "@/components/dashboard/ResumeViewer";
+import ResumeViewer from "@/fronthand/components/dashboard/ResumeViewer";
 
 export default async function CandidateDetailPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
