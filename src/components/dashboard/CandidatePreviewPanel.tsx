@@ -1,7 +1,7 @@
 "use client";
 
 import { X, Mail, Phone, Linkedin, MapPin, Briefcase, Calendar, CheckCircle2, XCircle, AlertTriangle } from "lucide-react";
-import { cn, statusStyles } from "../../fronthand/lib/utils";
+import { cn, statusStyles } from "@/lib/utils";
 
 interface CandidatePreviewPanelProps {
     candidate: any;

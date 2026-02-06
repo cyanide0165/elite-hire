@@ -3,7 +3,7 @@
 import { useState } from "react";
 import CandidateList from "./CandidateList";
 import { Zap, Users } from "lucide-react";
-import { cn } from "../../fronthand/lib/utils";
+import { cn } from "@/lib/utils";
 
 interface DashboardCandidateTabsProps {
     sourcedCandidates: any[];

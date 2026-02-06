@@ -3,7 +3,7 @@
 import { LogOut, Briefcase, BarChart2, Users, FileText, Linkedin, Settings, LayoutDashboard, Home } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { cn } from "../../fronthand/lib/utils";
+import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
     { href: "/dashboard", icon: LayoutDashboard, label: "Overview" },

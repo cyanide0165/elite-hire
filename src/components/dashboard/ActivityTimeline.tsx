@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from "../../fronthand/lib/utils";
+import { cn } from "@/lib/utils";
 import { CheckCircle2, UserPlus, FileText, Mail } from 'lucide-react';
 
 const ACTIVITIES = [

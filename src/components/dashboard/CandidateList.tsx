@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { User, AlertTriangle, Eye, Search, Filter, Linkedin, Download } from "lucide-react";
-import { statusStyles, cn } from "../../fronthand/lib/utils";
+import { statusStyles, cn } from "@/lib/utils";
 import CandidateProfileModal from "./CandidateProfileModal";
 
 interface CandidateListProps {

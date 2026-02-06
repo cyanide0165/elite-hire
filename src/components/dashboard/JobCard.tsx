@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Briefcase, MapPin, Users, Clock, ArrowRight } from "lucide-react";
-import { cn, jobStatusStyles } from "../../fronthand/lib/utils";
+import { cn, jobStatusStyles } from "@/lib/utils";
 
 interface JobCardProps {
     job: {

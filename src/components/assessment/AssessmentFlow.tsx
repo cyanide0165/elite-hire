@@ -5,7 +5,7 @@ import CodeEditor from "./CodeEditor";
 import PsychometricSection from "./PsychometricSection";
 import MCQSection from "./MCQSection";
 import { CameraProctor } from "@/components/proctoring/CameraProctor";
-import { tabStyles } from "../../fronthand/lib/utils";
+import { tabStyles } from "@/lib/utils";
 import { CheckCircle2 } from "lucide-react";
 import { useProctoring } from "@/hooks/useProctoring";
 import SystemCheck from "../assessment/SystemCheck"; // Importing from sibling/parent? Check path.

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { cn } from "../../fronthand/lib/utils";
+import { cn } from "@/lib/utils";
 
 interface NeuralBackgroundProps {
     className?: string;
