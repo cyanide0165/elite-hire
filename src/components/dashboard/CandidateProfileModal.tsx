@@ -1,7 +1,7 @@
 "use client";
 
 import { X, User, Mail, Briefcase, Award, AlertTriangle, CheckCircle, FileText } from "lucide-react";
-import { statusStyles } from "@/lib/utils";
+import { statusStyles } from "../../fronthand/lib/utils";
 
 interface CandidateProfileModalProps {
     candidate: any;

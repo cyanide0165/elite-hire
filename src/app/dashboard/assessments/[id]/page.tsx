@@ -1,4 +1,4 @@
-import AssessmentEditor from "@/fronthand/components/dashboard/AssessmentEditor";
+import AssessmentEditor from "@/components/dashboard/AssessmentEditor";
 import prisma from "@/backhand/lib/db";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
