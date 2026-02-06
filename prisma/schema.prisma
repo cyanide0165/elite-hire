@@ -1,0 +1,76 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Candidate {
+  id                String       @id @default(uuid())
+  name              String
+  email             String?      @unique
+  phone             String?
+  resumeText        String?
+  resumeUrl         String?
+  // LinkedIn Fields
+  linkedinId        String?      @unique
+  headline          String?
+  // Note: SQLite does not support String[], so we use String to store comma-separated skills
+  skills            String?      
+  profileUrl        String?
+  experienceSummary String?
+  lastSynced        DateTime?
+  
+  experienceYears   Float?
+  status            String       @default("PENDING")
+  matchScore        Float?
+  createdAt         DateTime     @default(now())
+  jobId             String?
+  technicalScore    Float?
+  softSkillScore    Float?
+  mcqScore          Float?
+  rationale         String?
+  resumeData        Bytes?
+  resumeType        String?
+  assessments       Assessment[]
+  job               Job?         @relation(fields: [jobId], references: [id])
+  proctorLogs       ProctorLog[]
+}
+
+model Job {
+  id                  String      @id @default(uuid())
+  title               String
+  department          String?     @default("Engineering")
+  location            String?     @default("Remote")
+  type                String?     @default("Full-time")
+  description         String
+  requirements        String
+  createdAt           DateTime    @default(now())
+  codingDetails       String?
+  mcqDetails          String?
+  psychometricDetails String?
+  candidates          Candidate[]
+}
+
+model Assessment {
+  id          String    @id @default(uuid())
+  candidateId String
+  type        String
+  data        String?
+  response    String?
+  score       Float?
+  feedback    String?
+  createdAt   DateTime  @default(now())
+  candidate   Candidate @relation(fields: [candidateId], references: [id])
+}
+
+model ProctorLog {
+  id          String    @id @default(uuid())
+  candidateId String
+  eventType   String
+  timestamp   DateTime  @default(now())
+  details     String?
+  candidate   Candidate @relation(fields: [candidateId], references: [id])
+}
